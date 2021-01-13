@@ -1,12 +1,14 @@
 :host {
   display: block;
   width: 100%;
-  margin-top: 40px;
+  margin-top: 32px;
 }
 
 .fluid-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  grid-gap: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(232px, 1fr));
+  grid-gap: 4px;
+  grid-column: 4px;
+  grid-row-gap: 54px;
   justify-items: center;
 }

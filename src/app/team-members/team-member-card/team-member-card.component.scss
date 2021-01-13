@@ -14,10 +14,13 @@
 .email {
   color: var(--text-accent);
   font-weight: bold;
+  margin-bottom: 4px;
 }
 
-.indended {
-  padding-left: 24px;
+@media (min-width: 700px) {
+  .indended {
+    padding-left: 24px;
+  }
 }
 
 .titles {
