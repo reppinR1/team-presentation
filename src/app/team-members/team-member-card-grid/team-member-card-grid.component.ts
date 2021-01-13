@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { MemberCards } from '../model';
+import { MemberCards } from '../team-member.model';
 
 @Component({
   selector: 'app-team-member-card-grid',

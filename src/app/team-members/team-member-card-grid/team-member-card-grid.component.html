@@ -1,8 +1,10 @@
 <ng-container *ngIf="memberCards; else loading">
-  <app-team-member-card
-    [memberCard]="memberCard.value"
-    *ngFor="let memberCard of memberCards | keyvalue"
-  >
-  </app-team-member-card>
+  <section class="fluid-grid">
+    <app-team-member-card
+      [memberCard]="memberCard.value"
+      *ngFor="let memberCard of memberCards | keyvalue"
+    >
+    </app-team-member-card>
+  </section>
 </ng-container>
-<ng-template #loading> Loading... </ng-template>
+<ng-template #loading> <section>Loading...</section></ng-template>
