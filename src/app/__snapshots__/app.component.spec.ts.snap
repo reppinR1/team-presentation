@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppComponent should render team members component 1`] = `
+<app-root
+  __ngContext__={[Function LRootView]}
+  title={[Function String]}
+>
+  <app-team-members
+    class="container"
+  />
+</app-root>
+`;

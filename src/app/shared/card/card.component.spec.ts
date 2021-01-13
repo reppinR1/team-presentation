@@ -1,25 +1,27 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { createHostFactory, SpectatorHost } from '@ngneat/spectator';
 import { CardComponent } from './card.component';
 
 describe('CardComponent', () => {
-  let component: CardComponent;
-  let fixture: ComponentFixture<CardComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ CardComponent ]
-    })
-    .compileComponents();
+  let spectator: SpectatorHost<CardComponent>;
+  const createHost = createHostFactory({
+    component: CardComponent,
+    shallow: true,
   });
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(CardComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+  it('should project image into image wrapper', () => {
+    spectator = createHost(`
+    <app-card>
+      <picture image></picture>
+    </app-card>
+    `);
+    expect(spectator.fixture).toMatchSnapshot();
   });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should project content into content section', () => {
+    spectator = createHost(`
+    <app-card>
+      <section content></section>
+    </app-card>
+    `);
+    expect(spectator.fixture).toMatchSnapshot();
   });
 });

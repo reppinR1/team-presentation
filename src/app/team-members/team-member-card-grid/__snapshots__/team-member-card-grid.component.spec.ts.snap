@@ -1,13 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TeamMemberCardGridComponent should should match snapshot 1`] = `
+exports[`TeamMemberCardGridComponent when cards are loaded should render card list when cards are loaded 1`] = `
 <app-team-member-card-grid
-  memberCards={[Function Array]}
+  __ngContext__={[Function LRootView]}
+  memberCards={[Function Object]}
 >
   <section
     class="fluid-grid"
+    data-test="card-grid"
   >
+    <app-team-member-card />
+    <app-team-member-card />
+    <app-team-member-card />
     
+  </section>
+</app-team-member-card-grid>
+`;
+
+exports[`TeamMemberCardGridComponent when cards are loading should render loading screen when the cards are not set 1`] = `
+<app-team-member-card-grid
+  __ngContext__={[Function LRootView]}
+  memberCards="null"
+>
+  <section
+    data-test="loading-section"
+  >
+    Loading...
   </section>
 </app-team-member-card-grid>
 `;

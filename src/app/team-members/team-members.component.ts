@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { MemberCards } from './team-member.model';
 import { TeamMembersService } from './team-members.service';
 

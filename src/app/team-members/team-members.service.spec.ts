@@ -18,6 +18,7 @@ describe('TeamMembersService', () => {
     ),
   };
   const service = new TeamMembersService(mockHttpClient as any);
+
   describe('getTeamMembers()', () => {
     it('should call API/tasks/index.json', (done) => {
       service.getTeamMembers().subscribe(() => {

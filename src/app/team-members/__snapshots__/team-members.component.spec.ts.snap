@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TeamMembersComponent should render title and team member cards grid 1`] = `
+<app-team-members
+  __ngContext__={[Function LRootView]}
+  memberCards$={[Function Observable]}
+  teamMembersService={[Function Object]}
+>
+  <h1
+    class="title"
+  >
+    Our team
+  </h1><app-team-member-card-grid />
+</app-team-members>
+`;
