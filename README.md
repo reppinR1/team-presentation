@@ -1,10 +1,10 @@
 # TeamPresentation
 
-Run ng s, and enjoy!
+Run _ng s_, and enjoy! 😉
 
 # Unit Tests
 
-Went with Jest and Spectator libs for unit testing.
+Went with Jest and Spectator libs for unit testing. Setup the _ng test_ to fire up the jest test runner.
 
 # Accessibility
 
