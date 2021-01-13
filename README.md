@@ -1,11 +1,14 @@
 # TeamPresentation
 
-Run _ng s_, and enjoy! 😉
+Run _npm i_ and _ng s_ , and enjoy! 😉
 
 # Unit Tests
 
-Went with Jest and Spectator libs for unit testing. Setup the _ng test_ to fire up the jest test runner.
+Went with Jest and Spectator for unit testing
+_ng test_ will run the jest test runner
 
 # Accessibility
 
-Made the font color a little darker than the design showed. The colors didn't have enough contrast against the light background.
+Made the font color a little darker than the ones on the design. The colors didn't have enough contrast against the light background.
+
+Made some adjustments to the design for the app to look better on mobile.

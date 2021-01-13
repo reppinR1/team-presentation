@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TeamMemberCardComponent should render the image and the team member's description  1`] = `
+<app-team-member-card
+  __ngContext__={[Function LRootView]}
+  memberCard={[Function Object]}
+>
+  <app-card>
+    <picture
+      image=""
+    >
+      <source
+        media="(min-width: 700px)"
+        srcset=""
+      />
+      <img
+        alt="desc"
+        class="image"
+        loading="lazy"
+        src="abc"
+      />
+    </picture>
+    <div
+      class="indended"
+      content=""
+    >
+      <div
+        class="titles"
+      >
+        <div
+          class="title"
+        >
+          title
+        </div>
+        <div>
+          desc
+        </div>
+      </div>
+      <div
+        class="email"
+      >
+        <a>
+          link
+        </a>
+      </div>
+      <div>
+        text
+      </div>
+    </div>
+  </app-card>
+</app-team-member-card>
+`;

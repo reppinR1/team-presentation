@@ -19,17 +19,17 @@ export interface MemberCard {
   block: Block;
 }
 
-interface Attributes {
-  title: string;
-  memberCards: MemberCards;
-}
-
-interface ImageUrl {
+export interface ImageUrl {
   w200: string;
   w400: string;
   w1080: string;
   w1920: string;
   w2560: string;
+}
+
+interface Attributes {
+  title: string;
+  memberCards: MemberCards;
 }
 
 interface Block {
