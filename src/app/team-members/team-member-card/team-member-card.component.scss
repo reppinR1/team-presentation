@@ -8,11 +8,24 @@
   height: 224px;
   object-fit: cover;
   object-position: top;
+  margin-bottom: 24px;
 }
 
 .email {
-  margin-bottom: 4px;
   color: var(--text-accent);
-  font-size: 0.8rem;
   font-weight: bold;
+}
+
+.indended {
+  padding-left: 24px;
+}
+
+.titles {
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--text-secondary);
 }

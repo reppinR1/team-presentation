@@ -1,13 +1,11 @@
-<app-card>
-  <ng-container image>
-    <img [src]="memberCard.imageUrl.w200" class="image" />
-  </ng-container>
-  <ng-container title>{{ memberCard.block.title }}</ng-container>
-  <ng-container secondary-title>
-    {{ memberCard.block.description }}
-  </ng-container>
-  <ng-container content>
-    <div class="email">{{ memberCard.block.link }}</div>
-    {{ memberCard.block.text }}
-  </ng-container>
-</app-card>
+<!-- <app-card> -->
+<img [src]="memberCard.imageUrl.w200" class="image" />
+<div class="indended">
+  <div class="titles">
+    <div class="title">{{ memberCard.block.title }}</div>
+    <div>{{ memberCard.block.description }}</div>
+  </div>
+  <div class="email">{{ memberCard.block.link }}</div>
+  {{ memberCard.block.text }}
+</div>
+<!-- </app-card> -->
