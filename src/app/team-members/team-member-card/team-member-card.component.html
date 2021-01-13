@@ -1,9 +1,13 @@
 <!-- <app-card> -->
-<img
-  [src]="memberCard.imageUrl.w200"
-  [alt]="memberCard.block.description"
-  class="image"
-/>
+<picture>
+  <source media="(min-width: 700px)" [srcset]="memberCard.imageUrl.w400" />
+  <img
+    [src]="memberCard.imageUrl.w200"
+    [alt]="memberCard.block.description"
+    loading="lazy"
+    class="image"
+  />
+</picture>
 <div class="indended">
   <div class="titles">
     <div class="title">{{ memberCard.block.title }}</div>
