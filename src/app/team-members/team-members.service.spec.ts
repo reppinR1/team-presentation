@@ -1,16 +1,38 @@
-import { TestBed } from '@angular/core/testing';
-
+import { of } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { TeamMembersService } from './team-members.service';
 
 describe('TeamMembersService', () => {
-  let service: TeamMembersService;
+  const memberCards = {};
+  const mockHttpClient = {
+    get: jest.fn(() =>
+      of({
+        data: [
+          {
+            attributes: {
+              memberCards,
+            },
+          },
+        ],
+      })
+    ),
+  };
+  const service = new TeamMembersService(mockHttpClient as any);
+  describe('getTeamMembers()', () => {
+    it('should call API/tasks/index.json', (done) => {
+      service.getTeamMembers().subscribe(() => {
+        expect(mockHttpClient.get).toHaveBeenCalledWith(
+          `${environment.apiUrl}/task/index.json`
+        );
+        done();
+      });
+    });
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(TeamMembersService);
-  });
-
-  it('should be created', () => {
-    expect(service).toBeTruthy();
+    it('should call API/tasks/index.json', (done) => {
+      service.getTeamMembers().subscribe((result) => {
+        expect(result).toEqual(memberCards);
+        done();
+      });
+    });
   });
 });

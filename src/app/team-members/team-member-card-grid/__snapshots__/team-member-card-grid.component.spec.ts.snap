@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TeamMemberCardGridComponent should should match snapshot 1`] = `
+<app-team-member-card-grid
+  memberCards={[Function Array]}
+>
+  <section
+    class="fluid-grid"
+  >
+    
+  </section>
+</app-team-member-card-grid>
+`;

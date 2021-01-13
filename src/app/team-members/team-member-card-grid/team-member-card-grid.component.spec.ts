@@ -15,6 +15,6 @@ describe('TeamMemberCardGridComponent', () => {
   });
 
   it('should should match snapshot', () => {
-    // expect(spectator.fixture).toMatchSnapshot();
+    expect(spectator.fixture).toMatchSnapshot();
   });
 });
