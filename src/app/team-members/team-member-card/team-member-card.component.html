@@ -1,21 +1,21 @@
-<!-- <app-card> -->
-<picture>
-  <source media="(min-width: 700px)" [srcset]="memberCard.imageUrl.w400" />
-  <img
-    [src]="memberCard.imageUrl.w200"
-    [alt]="memberCard.block.description"
-    loading="lazy"
-    class="image"
-  />
-</picture>
-<div class="indended">
-  <div class="titles">
-    <div class="title">{{ memberCard.block.title }}</div>
-    <div>{{ memberCard.block.description }}</div>
+<app-card>
+  <picture image>
+    <source media="(min-width: 700px)" [srcset]="memberCard.imageUrl.w400" />
+    <img
+      [src]="memberCard.imageUrl.w200"
+      [alt]="memberCard.block.description"
+      loading="lazy"
+      class="image"
+    />
+  </picture>
+  <div class="indended" content>
+    <div class="titles">
+      <div class="title">{{ memberCard.block.title }}</div>
+      <div>{{ memberCard.block.description }}</div>
+    </div>
+    <div class="email">
+      <a>{{ memberCard.block.link }}</a>
+    </div>
+    <div>{{ memberCard.block.text }}</div>
   </div>
-  <div class="email">
-    <a>{{ memberCard.block.link }}</a>
-  </div>
-  <div>{{ memberCard.block.text }}</div>
-</div>
-<!-- </app-card> -->
+</app-card>
