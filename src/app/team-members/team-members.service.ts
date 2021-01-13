@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
+import { Observable, throwError } from 'rxjs';
+import { catchError, filter, map, tap } from 'rxjs/operators';
 import { MemberCards, TeamMembersResponse } from './model';
 
 @Injectable({
@@ -16,7 +16,10 @@ export class TeamMembersService {
   public getTeamMembers(): Observable<MemberCards> {
     return this.httpClient.get<TeamMembersResponse>(this.teamMembersUrl).pipe(
       map((response) => response.data[0]),
-      map((data) => data.attributes.memberCards)
+      map((data) => data.attributes.memberCards),
+      catchError((error) => {
+        return throwError(error);
+      })
     );
   }
 }

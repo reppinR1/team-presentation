@@ -8,25 +8,20 @@ export interface TeamMembersResponseData {
   type: string;
 }
 
-export interface TeamMember {
-  imageUrl: ImageUrl;
-  block: Block;
-}
-
 export interface MemberCards {
   first: MemberCard;
   second: MemberCard;
   third: MemberCard;
 }
 
+export interface MemberCard {
+  imageUrl: ImageUrl;
+  block: Block;
+}
+
 interface Attributes {
   title: string;
   memberCards: MemberCards;
-}
-
-interface MemberCard {
-  imageUrl: ImageUrl;
-  block: Block;
 }
 
 interface ImageUrl {

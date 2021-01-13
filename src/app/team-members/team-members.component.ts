@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { TeamMember, TeamMembers } from './model';
+import { MemberCards } from './model';
 import { TeamMembersService } from './team-members.service';
 
 @Component({
@@ -9,16 +9,15 @@ import { TeamMembersService } from './team-members.service';
   styleUrls: ['./team-members.component.scss'],
 })
 export class TeamMembersComponent {
-  teamMembers: Observable<any>;
+  memberCards$: Observable<MemberCards>;
 
   constructor(private teamMembersService: TeamMembersService) {}
 
   ngOnInit() {
     this.getTeamMembers();
-    this.teamMembers.subscribe((x) => console.log(x));
   }
 
   private getTeamMembers(): void {
-    this.teamMembers = this.teamMembersService.getTeamMembers();
+    this.memberCards$ = this.teamMembersService.getTeamMembers();
   }
 }
