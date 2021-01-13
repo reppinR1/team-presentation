@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@angular-builders/jest": "^11.0.0",
-    "@angular-devkit/build-angular": "~0.1001.7",
+    "@angular-devkit/build-angular": "^0.1100.6",
     "@angular/cli": "~10.1.7",
     "@angular/compiler-cli": "~10.1.6",
     "@ngneat/spectator": "^6.1.3",
